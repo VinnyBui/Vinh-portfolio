@@ -9,15 +9,21 @@ const Hero = () => {
             style={{ backgroundImage: `url(${bg})` }}
             aria-label="Hero Section"
         >
-            <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 1 }}
-                className="text-white px-4 py-8 md:px-8 space-y-4"
-            >
-                <h1 className="text-4xl md:text-6xl font-bold">Vinh Bui</h1>
-                <p className="text-lg md:text-xl mt-4">Welcome to my portfolio</p>
-            </motion.div>
+        <motion.section 
+            className="relative min-h-screen flex flex-col justify-center items-center bg-cover bg-center"
+            style={{ backgroundImage: `url(${bg})` }}
+            animate={{
+                backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"],
+            }}
+            transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "easeInOut",
+            }}
+        >
+            <h1 className="text-white text-5xl">Vinh Bui</h1>
+        </motion.section>
+
 
         </section>
     )

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { HomeIcon } from "lucide-react";
 import Hero from "@/components/utils/hero";
+import DockBar from "@/components/utils/dockBar";
 const Home = () => {
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center ">
@@ -10,6 +10,7 @@ const Home = () => {
       <main>
         
       </main>
+        <DockBar/>
       {/* Footer */}
       <footer>
         

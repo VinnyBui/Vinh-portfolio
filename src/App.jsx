@@ -5,7 +5,7 @@ import { ThemeProvider } from '@/components/ui/theme-provider';
 const Home = lazy(() => import('./components/pages/home'));
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark">
+    <ThemeProvider defaultTheme="light">
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>

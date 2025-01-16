@@ -1,29 +1,35 @@
-import React from 'react';
-import bg from "@/assets/bg.jpg";
+import React from "react";
+import { motion } from "framer-motion";
+import silkBg from "@/assets/silk.png"; // Correctly import the silk image
+
 const Hero = () => {
     return (
-    <section className="h-screen w-screen overflow-hidden flex flex-col">
-        <div
-            className="bg-cover bg-center h-2/5 m-24  border border-white rounded-md"
-            style={{ backgroundImage: `url(${bg})` }}
-        >
-            <h1 className="text-white text-bold text-3xl text-center pt-10">
-                Title Goes Here
-            </h1>
-        </div>
-        {/* BIO */}
-        <div className="flex-grow mx-24 mb-24 flex justify-between">
-            <div className="bg-red-500 w-1/2">
-                <h1 className='text-black'>Vinh Bui</h1>
+        <section className="relative h-screen w-screen flex flex-col justify-center items-center overflow-hidden">
+            <motion.div
+                className="absolute inset-0"
+                style={{
+                    backgroundImage: `url(${silkBg})`,
+                    backgroundSize: "200% 200%",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+
+                }}
+                animate={{
+                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] 
+                }}
+                transition={{
+                    duration: 10,
+                    ease: "easeInOut",
+                    repeat: Infinity
+                }}
+            />
+            {/* Hero Content */}
+            <div className="relative z-10 text-center text-black">
+                <h1 className="text-6xl font-bold">Vinh Bui</h1>
+                <p className="text-2xl mt-4">Software Developer</p>
             </div>
-            <div className="bg-blue-500 w-1/2">
-                <p>Software developer looking for work</p>
-            </div>
-        </div>
-    </section>
+        </section>
     );
 };
 
 export default Hero;
-
-

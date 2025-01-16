@@ -7,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 
 const DockBar = () => {
   return (
-    <div className="relative">
+    <div className="fixed bottom-0 w-full">
       <Dock direction="middle">
         <DockIcon>
           <HomeIcon/>

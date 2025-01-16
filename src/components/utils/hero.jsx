@@ -26,10 +26,31 @@ const Hero = () => {
             {/* Hero Content */}
             <div className="relative z-10 text-center text-black w-1/2 lg:w-1/3 px-4">
                 <h1 className="text-6xl lg:text-9xl font-bold">
-                        <span>Vinh</span>{" "}
-                        <span className="text-blue-500">Bui</span>
+                    <motion.span
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.5, duration: 1 }}
+                        >
+                            Vinh
+                        </motion.span>{" "}
+                        <motion.span
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.7, duration: 1 }}
+                            className="text-blue-500"
+                        >
+                            Bui
+                        </motion.span>
                     </h1>
-                <p className="text-md lg:text-2xl mt-4">Passionate about building user-friendly experiences and solving real-world problems with code</p>
+                    {/* Animated Content */}
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1, duration: 1.5 }}
+                        className="text-md lg:text-2xl mt-4"
+                    >
+                        Passionate about building user-friendly experiences and solving real-world problems with code
+                    </motion.p>
             </div>
         </section>
     );

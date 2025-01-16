@@ -15,10 +15,10 @@ const Hero = () => {
 
                 }}
                 animate={{
-                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] 
+                    backgroundPosition: ["0% 45%", "100% 60%", "0% 45%"] 
                 }}
                 transition={{
-                    duration: 5,
+                    duration: 10,
                     ease: "easeInOut",
                     repeat: Infinity
                 }}
